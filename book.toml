@@ -4,3 +4,6 @@ language = "ja"
 multilingual = false
 src = "src"
 title = "CODE BLUE 学スタ 非公式チュートリアル"
+
+[output.html]
+cname = "cb-t.penguincabinet.com"
