@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CODE BLUE 学スタ 非公式チュートリアル</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_0.html"><strong aria-hidden="true">1.</strong> はじめに</a></li><li class="chapter-item expanded "><a href="About.html"><strong aria-hidden="true">2.</strong> 学生スタッフ申し込みの注意点</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">3.</strong> 事前準備</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">4.</strong> 初日の流れ</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">5.</strong> 当日の流れ</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">6.</strong> 撤収の流れ</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">7.</strong> イベント終了後</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">CODE BLUE 学スタ 非公式チュートリアル</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#はじめに" id="はじめに">はじめに</a></h1>
+<p>これは<a href="https://codeblue.jp/">CODE BLUE</a> 学生スタッフ 非公式チュートリアルです。<br />
+これから学生スタッフに参加される方が爆死しないよう、作りました。</p>
+<h2><a class="header" href="#注意" id="注意">注意</a></h2>
+<ul>
+<li>これは筆者の<strong>非公式私的</strong>な見解です。これを守って、別の爆死の仕方をしても、何ら責任を取りません。</li>
+<li>また、記述の正確性に注意を払っていますが、間違っているものもあるかもしれません。</li>
+<li>年度によってイベントの内容等は変わりますのでご注意ください。これは<strong>2022年度</strong>の情報です。</li>
+</ul>
+<h1><a class="header" href="#学生スタッフの申し込み時の注意点" id="学生スタッフの申し込み時の注意点">学生スタッフの申し込み時の注意点</a></h1>
+<ul>
+<li>全3日で、最初の日が事前打ち合わせとスポンサーとの顔合わせ、残りが2日間がイベント運営です。</li>
+<li>宿泊するか(宿泊勢)、家から往復するか(往復勢)を選べます。</li>
+<li>ネットワークスタッフと違い、案内や事務作業等がメインです。</li>
+<li>イベント中の2日間は朝の7時くらいから夜の9時まで活動するため、体力が必要です。</li>
+<li>集合が朝7時と早いため、宿泊でなく往復する場合注意！<strong>早朝に起きて行くのは予想以上にキツイ</strong>です。</li>
+<li>英語ができなくても、できる仕事はありますが、英語圏のスピーカー・スポンサーも沢山いらっしゃるのでそういう人と話したい場合は英語スキルが必要です。</li>
+</ul>
+<h1><a class="header" href="#事前準備" id="事前準備">事前準備</a></h1>
+<h2><a class="header" href="#持ち物を確認しよう" id="持ち物を確認しよう">持ち物を確認しよう</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+スマホ</li>
+<li><input disabled="" type="checkbox"/>
+充電器</li>
+<li><input disabled="" type="checkbox"/>
+着替え</li>
+<li><input disabled="" type="checkbox"/>
+PC or タブレット
+<ul>
+<li>講演の視聴用に使います。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+腕時計</li>
+<li><input disabled="" type="checkbox"/>
+名刺
+<ul>
+<li><strong>最低でも50枚くらい</strong>持っていったほうがいいです。学スタだけで30人くらいいますし、スポンサーとの会食では名刺必須です。多すぎるくらいがちょうどいいです。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+イヤホン
+<ul>
+<li>講演の視聴用に使います。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+ショルダーバッグ
+<ul>
+<li>両手が空くと便利です。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+リュックサック
+<ul>
+<li>宿泊勢は元々大きいものを持っていくかもしれませんが、往復勢も初日にtシャツを持ち帰ったりするので大きいサイズのほうがいいです。</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#初日の流れ" id="初日の流れ">初日の流れ</a></h1>
+<h2><a class="header" href="#仕事内容の確認" id="仕事内容の確認">仕事内容の確認</a></h2>
+<p>それぞれ役割分担が降られているため、何をすればいいかしっかりと説明を聞きましょう。<br />
+また、会場の案内もあるはずなので、会場の構造をなんとなく覚えておきましょう。<br />
+学スタ用パンフレットが支給され、そこに色々書いてあるので読みましょう。</p>
+<h2><a class="header" href="#待っているだけでは学スタと仲良くなれません" id="待っているだけでは学スタと仲良くなれません">待っているだけでは学スタと仲良くなれません</a></h2>
+<p>名刺交換やSNS(Twitter等)を交換したり、話しかけましょう。<br />
+3日間しかない上、濃いイベントでドンドン仲良くなってしまうため、待っているとイベントが終わってしまいます。</p>
+<h2><a class="header" href="#名刺交換の方法を覚えておきましょう" id="名刺交換の方法を覚えておきましょう">名刺交換の方法を覚えておきましょう</a></h2>
+<p>慣れていない学生だと名刺交換の方法が分からない場合があります。軽く調べておくといいです。</p>
+<h2><a class="header" href="#スポンサーとの会食" id="スポンサーとの会食">スポンサーとの会食</a></h2>
+<p>会食に慣れていないと、いきなりのことでどうしていいか分からなくなりますが、積極的に話しかけてみましょう。<br />
+礼儀を守っていれば、なんとか話せます。</p>
+<h1><a class="header" href="#当日の流れ" id="当日の流れ">当日の流れ</a></h1>
+<h2><a class="header" href="#最初から飛ばしすぎない" id="最初から飛ばしすぎない">最初から飛ばしすぎない</a></h2>
+<p>張り切る気持ちはよくわかりますが、このイベントは7時から21時と長いです。<br />
+朝から飛ばしていると、夜までもたないです。</p>
+<h2><a class="header" href="#暇を持て余したらスポンサーと話す講演を聞こう" id="暇を持て余したらスポンサーと話す講演を聞こう">暇を持て余したら、スポンサーと話す・講演を聞こう</a></h2>
+<p>せっかくの学生スタッフです。CODE BLUEを楽しみましょう。<br />
+スポンサーの方々が展示をしているので、話を聞きに行くといいです。多くの場合、名刺交換に応じてくれるので、挑戦してみましょう。</p>
+<h3><a class="header" href="#注意-1" id="注意-1">⚠️注意</a></h3>
+<p>繰り返しになりますが、飛ばしすぎないことも大事です。<br />
+疲れたら休憩室で休んだり、水分を取りましょう。</p>
+<h2><a class="header" href="#シフトを忘れずに" id="シフトを忘れずに">シフトを忘れずに</a></h2>
+<p>スポンサーの方と話が弾むと、シフトを忘れる場合があるので、注意してください。<br />
+定期的に腕時計を見る習慣をつけておくといいです。</p>
+<h2><a class="header" href="#貴重品は必ずロッカーに" id="貴重品は必ずロッカーに">貴重品は必ずロッカーに</a></h2>
+<p>貴重品の盗難等のリスクがあるため、荷物は必ずロッカーへ入れましょう。<br />
+ちょっと出かける場合でも、入れたほうがいいです。</p>
+<h1><a class="header" href="#撤収の流れ" id="撤収の流れ">撤収の流れ</a></h1>
+<p><strong>お疲れ様でした！</strong></p>
+<h2><a class="header" href="#荷物を忘れずに" id="荷物を忘れずに">荷物を忘れずに</a></h2>
+<p>イベント終了で浮かれがちなので、よく周りを確認して帰りましょう。</p>
+<h1><a class="header" href="#イベント終了後" id="イベント終了後">イベント終了後</a></h1>
+<h2><a class="header" href="#参加記を書く" id="参加記を書く">参加記を書く</a></h2>
+<p>自分のブログに参加記を書くのが、おすすめです。<br />
+参加記を書いたら、<a href="https://github.com/PenguinCabinet/CB-Blogs">参加記リスト</a>にPRを送ってもらえると嬉しいです。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
