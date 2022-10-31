@@ -1,0 +1,6 @@
+[book]
+authors = ["PenguinCabinet"]
+language = "ja"
+multilingual = false
+src = "src"
+title = "CODE BLUE 学スタ 非公式チュートリアル"
