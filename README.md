@@ -5,6 +5,11 @@
 
 ## 🏗Dev
 
+mdbookを使用しています。
+
+### 🖊記述
+[src](/src/)以下にMarkdownで記述してください。
+
 ### 🏢ローカルにサーバーを建てる
 ```
 mdbook serve
